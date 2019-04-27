@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>File upload</title>
+  <style >
+    .container{
+      width: 80%;
+      background-color: #ccc;
+      margin:0 auto;
+    }
+    .btn{
+      width:70px;
+      height: 34px;
+      background-color:#5fd2b5;
+      margin-top:8px;
+      border-radius: 4px;
+      border-color:#5fd2b5;
+    }
+    .form{
+      margin:24px 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h3>上传图片</h3>
+      <div style="color: red">
+        <%= typeof msg !== 'undefined' ? msg : '' %>
+      </div>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div>
+          <input type="file" name="uploadFile">
+        </div>
+        <div>
+          <button class="btn" type="submit">上传</button>
+        </div>
+      </form>
+    </div>
+    <img width="400" src="<%= typeof path !== 'undefined' ? path : '' %>" alt="">
+  </div>
+</body>
+</html>
