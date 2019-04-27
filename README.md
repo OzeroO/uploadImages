@@ -1,7 +1,7 @@
 # uploadImages
 a simple example for uploading image by node
-# express+multer+ejs
-
-# run project
+# 技术栈
+express + multer + ejs
+# Development
 npm i
 npm run dev
